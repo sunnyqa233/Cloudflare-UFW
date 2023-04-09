@@ -54,22 +54,30 @@ if enable_ipv4:
 
     for port in ipv4_tcp_ports:
         for ip in cloudflare_ipv4_list:
-            os.system(f"ufw allow proto tcp from {ip} to any port {port} comment '{comment}'")
+            command = f"ufw allow proto tcp from {ip} to any port {port} comment '{comment}'"
+            print(command)
+            os.system(command)
 
     for port in ipv4_udp_ports:
         for ip in cloudflare_ipv4_list:
-            os.system(f"ufw allow proto udp from {ip} to any port {port} comment '{comment}'")
+            command = f"ufw allow proto udp from {ip} to any port {port} comment '{comment}'"
+            print(command)
+            os.system(command)
 
 
 if enable_ipv6:
 
     for port in ipv6_tcp_ports:
         for ip in cloudflare_ipv6_list:
-            os.system(f"ufw allow proto tcp from {ip} to any port {port} comment '{comment}'")
+            command = f"ufw allow proto tcp from {ip} to any port {port} comment '{comment}'"
+            print(command)
+            os.system(command)
 
     for port in ipv6_udp_ports:
         for ip in cloudflare_ipv6_list:
-            os.system(f"ufw allow proto udp from {ip} to any port {port} comment '{comment}'")
+            command = f"ufw allow proto udp from {ip} to any port {port} comment '{comment}'"
+            print(command)
+            os.system(command)
 
 """
 Parse UFW status
@@ -151,4 +159,6 @@ for rule in existing_rules:
 Remove outdated rules
 """
 for rule in outdated_rules:
-    os.system(f"ufw delete allow proto {rule['proto']} from {rule['ip']} to any port {rule['port']}")
+    command = f"ufw delete allow proto {rule['proto']} from {rule['ip']} to any port {rule['port']}"
+    print(command)
+    os.system(command)
