@@ -1,0 +1,6 @@
+{
+  "ipv4": true,
+  "ipv4_list": "https://www.cloudflare.com/ips-v4",
+  "ipv6": true,
+  "ipv6_list": "https://www.cloudflare.com/ips-v6"
+}
