@@ -32,7 +32,7 @@ ipv6_udp_ports = [443]  # Open these UDP ports for Cloudflare via IPV6
 2. Ensure the script its own by root, and only root has it's write permission. (Safety reason)
    ```bash
    chown -R root:root Cloudflare-UFW
-   chmod -R 644 . Cloudflare-UFW
+   chmod -R 644 Cloudflare-UFW
    ```
 3. Install dependency.
    ```
