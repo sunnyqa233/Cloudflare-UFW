@@ -50,8 +50,8 @@ ipv6_udp_ports = [443]  # Open these UDP ports for Cloudflare via IPV6
    You may refer to [this guide](https://towardsdatascience.com/how-to-schedule-python-scripts-with-cron-the-only-guide-youll-ever-need-deea2df63b4e).
 
 ## Reminder
-For users of `aapanel` or `宝塔面板`. If you have no rules about port 443 in the panel's `security` section, the panel would automatically allow port 443(tcp and udp) to be access from anywhere if you applied SSL certificate.  
-Create a placeholder(e.g. Allow 443/tcp access from 127.0.0.1 in the panel) to avoid this issue.
+For users of `aapanel` or `宝塔面板`. The panel would automatically allow port 443(tcp and udp) to be access from anywhere if you applied SSL certificate.  
+Remember to remove those rules.
 
 ## Dev
 If you had any problem using this script, please report it in Issues.
